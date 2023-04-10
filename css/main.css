@@ -1,0 +1,139 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  font-family: 'Fraunces', serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Cream);
+}
+main .image img.mobile {
+  display: none;
+}
+@media (max-width: 375px) {
+  main .image img.mobile {
+    display: block;
+  }
+  main .image img.desktop {
+    display: none;
+  }
+}
+main .info .main-title,
+main .info p:not(.price),
+main .info .price span {
+  font-family: 'Montserrat', sans-serif;
+}
+main {
+  display: flex;
+  width: 650px;
+  height: 490px;
+  background-color: var(--White);
+  border-radius: 10px;
+}
+@media (max-width: 375px) {
+  main {
+    flex-direction: column;
+    width: 400px;
+    height: fit-content;
+  }
+}
+main .image  {
+  width: 50%;
+  height: 100%;
+}
+main .image img.desktop {
+  width: 325px;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+@media (max-width: 375px) {
+  main .image {
+    width: 100%;
+    height: 50%;
+  }
+  main .image img.mobile {
+    width: 100%;
+    height: 325px;
+    border-radius: 10px 10px 0 0;
+  }
+}
+main .info {
+  padding: 40px;
+}
+@media (max-width: 375px) {
+  main .info {
+    padding: 20px;
+  }
+}
+main .info .main-title {
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--Dark-cyan);
+  margin: 0;
+}
+@media (max-width: 375px) {
+  main .info .main-title {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+} 
+main .info .title {
+  line-height: 0.99;
+}
+@media (max-width: 375px) {
+  main .info .title {
+    margin: 5px 0;
+  }
+}
+main .info p:not(.price) {
+  font-size: 14px;
+  color: var(--Dark-grayish-blue);
+  line-height: 1.6;
+}
+@media (max-width: 375px) {
+  main .info p:not(.price) {
+    font-size: 15.5px;
+  }
+}
+main .info .price {
+  font-size: 35px;
+  color: var(--Dark-cyan);
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 375px) {
+  main .info .price {
+    margin: 10px 0;
+  }
+}
+main .info .price span {
+  display: block;
+  font-size: 14px;
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+  margin-left: 20px;
+}
+main .info button {
+  border: none;
+  background-color: var(--Dark-cyan);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+main .info button img {
+  margin-right: 10px;
+}
